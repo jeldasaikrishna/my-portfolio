@@ -15,6 +15,31 @@
         .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
         .service-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
         .industry-tag { background: rgba(79, 70, 229, 0.05); color: #4f46e5; border: 1px solid rgba(79, 70, 229, 0.1); }
+        
+        select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 1rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .nav-logo {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .footer-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -23,8 +48,11 @@
     <nav class="fixed w-full z-[100] glass-nav">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between h-20 items-center">
-                <a href="javascript:void(0)" onclick="navigateTo('home')" class="text-2xl font-extrabold tracking-tighter text-indigo-600">
-                    JALDHA <span class="text-slate-900">SAIKRISHNA</span>
+                <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center">
+                    <img src="https://lh3.googleusercontent.com/d/11FjtJfFDkUAFwJffzXeY7noQnnPODOtG" alt="Jaldha Saikrishna Logo" class="nav-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="hidden text-2xl font-extrabold tracking-tighter text-indigo-600">
+                        JALDHA <span class="text-slate-900">SAIKRISHNA</span>
+                    </span>
                 </a>
                 
                 <div class="hidden md:flex items-center space-x-8">
@@ -57,7 +85,8 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-2">
-                    <h3 class="text-2xl font-bold mb-6 text-indigo-400">JALDHA SAIKRISHNA</h3>
+                    <img src="https://lh3.googleusercontent.com/d/11FjtJfFDkUAFwJffzXeY7noQnnPODOtG" alt="Jaldha Saikrishna Logo" class="footer-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h3 class="hidden text-2xl font-bold mb-6 text-indigo-400">JALDHA SAIKRISHNA</h3>
                     <p class="text-slate-400 max-w-sm mb-8">Helping ambitious brands scale their revenue through data-backed marketing and high-converting web experiences.</p>
                     <div class="flex gap-4">
                         <a href="https://www.linkedin.com/in/saikrishna-digitalmarketing/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-all"><i class="fab fa-linkedin-in"></i></a>
@@ -81,7 +110,7 @@
                 </div>
             </div>
             <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-                &copy; Saikrishna Jaldha. All Rights Reserved.
+                &copy; 2024 Jaldha Saikrishna. All Rights Reserved.
             </div>
         </div>
     </footer>
@@ -130,28 +159,55 @@
                 </div>
             </section>
 
-            <!-- Home Services Preview -->
+            <!-- Home Services Grid -->
             <section class="py-24 px-6 bg-white">
                 <div class="max-w-7xl mx-auto">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-black mb-4">How I Can Help You</h2>
-                        <p class="text-slate-500">End-to-end digital solutions designed to drive revenue, not just clicks.</p>
+                        <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Full Suite of Services</h2>
+                        <p class="text-slate-500">Tailored digital strategies to solve your most pressing business challenges.</p>
                     </div>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100 service-card">
-                            <i class="fas fa-chart-line text-4xl text-indigo-600 mb-6"></i>
-                            <h3 class="text-xl font-bold mb-4">Growth Strategy</h3>
-                            <p class="text-slate-600 mb-6">Custom roadmaps that combine SEO, content, and paid media for sustainable scale.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- S1 -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 service-card">
+                            <i class="fas fa-laptop-code text-3xl text-indigo-600 mb-6"></i>
+                            <h3 class="text-xl font-bold mb-3">Website Development</h3>
+                            <p class="text-slate-600 mb-6 text-sm">High-performance WordPress and custom sites built for speed and sales conversion.</p>
+                            <button onclick="navigateTo('service-web')" class="text-indigo-600 font-bold text-sm flex items-center gap-2">Explore <i class="fas fa-arrow-right text-xs"></i></button>
                         </div>
-                        <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100 service-card">
-                            <i class="fas fa-laptop-code text-4xl text-indigo-600 mb-6"></i>
-                            <h3 class="text-xl font-bold mb-4">High-ROI Web Dev</h3>
-                            <p class="text-slate-600 mb-6">Mobile-first, lightning-fast websites built using WordPress, Shopify, or Custom code.</p>
+                        <!-- S2 -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 service-card">
+                            <i class="fas fa-search-dollar text-3xl text-indigo-600 mb-6"></i>
+                            <h3 class="text-xl font-bold mb-3">SEO Optimization</h3>
+                            <p class="text-slate-600 mb-6 text-sm">Dominate search results and drive consistent organic traffic to your business.</p>
+                            <button onclick="navigateTo('service-seo')" class="text-indigo-600 font-bold text-sm flex items-center gap-2">Explore <i class="fas fa-arrow-right text-xs"></i></button>
                         </div>
-                        <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100 service-card">
-                            <i class="fas fa-target-accent text-4xl text-indigo-600 mb-6"></i>
-                            <h3 class="text-xl font-bold mb-4">Paid Advertising</h3>
-                            <p class="text-slate-600 mb-6">Data-driven Meta and Google Ads management focusing on lowering your CAC.</p>
+                        <!-- S3 -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 service-card">
+                            <i class="fas fa-ad text-3xl text-indigo-600 mb-6"></i>
+                            <h3 class="text-xl font-bold mb-3">Paid Advertising</h3>
+                            <p class="text-slate-600 mb-6 text-sm">Targeted Google and Meta ad campaigns with a focus on lowering CAC and maximizing ROI.</p>
+                            <button onclick="navigateTo('service-ads')" class="text-indigo-600 font-bold text-sm flex items-center gap-2">Explore <i class="fas fa-arrow-right text-xs"></i></button>
+                        </div>
+                        <!-- S4 -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 service-card">
+                            <i class="fas fa-share-alt text-3xl text-indigo-600 mb-6"></i>
+                            <h3 class="text-xl font-bold mb-3">Social Media Management</h3>
+                            <p class="text-slate-600 mb-6 text-sm">Build community and brand authority through strategic platform management.</p>
+                            <button onclick="navigateTo('service-smm')" class="text-indigo-600 font-bold text-sm flex items-center gap-2">Explore <i class="fas fa-arrow-right text-xs"></i></button>
+                        </div>
+                        <!-- S5 -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 service-card">
+                            <i class="fas fa-pencil-ruler text-3xl text-indigo-600 mb-6"></i>
+                            <h3 class="text-xl font-bold mb-3">Branding & Identity</h3>
+                            <p class="text-slate-600 mb-6 text-sm">Defining your unique visual language to stand out in crowded markets.</p>
+                            <button onclick="navigateTo('service-branding')" class="text-indigo-600 font-bold text-sm flex items-center gap-2">Explore <i class="fas fa-arrow-right text-xs"></i></button>
+                        </div>
+                        <!-- S6 -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 service-card">
+                            <i class="fas fa-chart-pie text-3xl text-indigo-600 mb-6"></i>
+                            <h3 class="text-xl font-bold mb-3">Consultation</h3>
+                            <p class="text-slate-600 mb-6 text-sm">Strategic audits and growth planning for long-term digital success.</p>
+                            <button onclick="navigateTo('contact')" class="text-indigo-600 font-bold text-sm flex items-center gap-2">Talk to Me <i class="fas fa-arrow-right text-xs"></i></button>
                         </div>
                     </div>
                 </div>
@@ -164,7 +220,7 @@
         <div class="page-transition py-24 px-6 max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row gap-16 items-center">
                 <div class="md:w-1/2">
-                    <h2 class="text-5xl font-black mb-6">Conversion-Focused Web Development</h2>
+                    <h2 class="text-5xl font-black mb-6">Website Development</h2>
                     <p class="text-xl text-slate-600 mb-8 leading-relaxed">Your website is your best salesperson. I build digital experiences that load fast, rank high on search engines, and turn visitors into loyal customers.</p>
                     <div class="space-y-4 mb-8">
                         <div class="flex gap-4 items-start"><div class="w-6 h-6 bg-indigo-100 rounded text-indigo-600 flex items-center justify-center mt-1"><i class="fas fa-check text-xs"></i></div><div><h4 class="font-bold">E-commerce Stores</h4><p class="text-slate-500">Specialized Shopify and WooCommerce builds.</p></div></div>
@@ -180,7 +236,7 @@
     <template id="page-service-seo">
         <div class="page-transition py-24 px-6 max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-5xl font-black mb-6">Search Engine Dominance</h2>
+                <h2 class="text-5xl font-black mb-6 uppercase tracking-tight">Search Engine Dominance</h2>
                 <p class="text-xl text-slate-600">Organic growth is the backbone of any successful online business. I implement white-hat SEO strategies that actually move the needle.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
@@ -221,24 +277,81 @@
         </div>
     </template>
 
+    <template id="page-service-smm">
+        <div class="page-transition py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-5xl font-black mb-6">Social Media Management</h2>
+                <p class="text-xl text-slate-600 leading-relaxed">It's not just about posting; it's about positioning. I help you build a presence that converts followers into brand advocates.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-10 rounded-3xl border border-slate-100">
+                    <h3 class="text-2xl font-bold mb-4">Strategic Content</h3>
+                    <p class="text-slate-600 mb-6">I create content calendars that align with your business goals, ensuring every post serves a purpose—whether it's awareness, engagement, or sales.</p>
+                    <ul class="space-y-3 text-slate-500">
+                        <li><i class="fas fa-hashtag text-indigo-600 mr-2"></i> Custom Visual Assets</li>
+                        <li><i class="fas fa-hashtag text-indigo-600 mr-2"></i> Copywriting that Sells</li>
+                        <li><i class="fas fa-hashtag text-indigo-600 mr-2"></i> Reels & Short-form Video Strategy</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-slate-100">
+                    <h3 class="text-2xl font-bold mb-4">Community Growth</h3>
+                    <p class="text-slate-600 mb-6">Social media is a two-way street. I manage your community engagement to ensure your brand feels human and responsive.</p>
+                    <ul class="space-y-3 text-slate-500">
+                        <li><i class="fas fa-users text-indigo-600 mr-2"></i> Active Engagement</li>
+                        <li><i class="fas fa-users text-indigo-600 mr-2"></i> Influencer Partnerships</li>
+                        <li><i class="fas fa-users text-indigo-600 mr-2"></i> Detailed Performance Reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="page-service-branding">
+        <div class="page-transition py-24 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-5xl font-black mb-6">Branding & Identity</h2>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed">Your brand is the promise you make to your customers. I help you define that promise through powerful visual identity and strategic positioning.</p>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-white rounded-2xl border border-slate-100">
+                            <h4 class="font-bold text-lg mb-2">Visual Languages</h4>
+                            <p class="text-slate-500 text-sm">Logo design, typography, and color palettes that represent your values.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-100">
+                            <h4 class="font-bold text-lg mb-2">Brand Voice</h4>
+                            <p class="text-slate-500 text-sm">Developing a tone of voice that resonates with your target demographic.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-100">
+                            <h4 class="font-bold text-lg mb-2">Brand Guidelines</h4>
+                            <p class="text-slate-500 text-sm">Ensuring consistency across all digital and physical touchpoints.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 bg-indigo-50 p-12 rounded-[3rem]">
+                    <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" class="rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </template>
+
     <template id="page-about">
         <div class="page-transition py-24 px-6 max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row gap-16 items-center">
                 <div class="md:w-1/2">
                     <div class="relative inline-block mb-8">
                         <div class="w-64 h-64 bg-indigo-100 rounded-[2.5rem] overflow-hidden">
-                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGnKzsDZqgLCQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707147044061?e=1768435200&v=beta&t=j7uxZLhxFSotsAdHz5I6akPmVacVPYehuwP893DF9jc" alt="Saikrishna Jaldha" class="w-full h-full object-cover">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGnKzsDZqgLCQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707147044061?e=1768435200&v=beta&t=j7uxZLhxFSotsAdHz5I6akPmVacVPYehuwP893DF9jc" alt="Jaldha Saikrishna" class="w-full h-full object-cover">
                         </div>
                         <div class="absolute -bottom-4 -right-4 bg-indigo-600 text-white p-4 rounded-2xl shadow-lg">
                             <p class="text-xs font-bold uppercase tracking-widest">Growth Expert</p>
-                            <p class="font-bold">Saikrishna Jaldha</p>
+                            <p class="font-bold">Jaldha Saikrishna</p>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <h2 class="text-5xl font-black mb-8">6+ Years of <span class="text-indigo-600">Digital Mastery</span></h2>
-                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">I am an independent Digital Marketing Consultant with a track record of delivering high-impact results for clients globally. My philosophy is simple: **Marketing should be a profit center, not an expense.**</p>
-                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">Having worked across diverse industries like Healthcare, Real Estate, and E-commerce, I understand that every business has unique challenges. I don't offer cookie-cutter packages; I build tailored systems designed to achieve your specific KPIs.</p>
+                    <h2 class="text-5xl font-black mb-8 uppercase tracking-tight">6+ Years of <span class="text-indigo-600">Digital Mastery</span></h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">I am <strong>Jaldha Saikrishna</strong>, an independent Digital Marketing Consultant with a track record of delivering high-impact results for clients globally.</p>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">Having worked across diverse industries like Healthcare, Real Estate, and E-commerce, I understand that every business has unique challenges. I build tailored systems designed to achieve your specific KPIs.</p>
                     <div class="grid grid-cols-2 gap-8">
                         <div><p class="text-3xl font-black text-indigo-600">6+</p><p class="text-sm font-bold text-slate-500 uppercase">Years Experience</p></div>
                         <div><p class="text-3xl font-black text-indigo-600">10+</p><p class="text-sm font-bold text-slate-500 uppercase">Industries Served</p></div>
@@ -250,14 +363,14 @@
 
     <template id="page-blog">
         <div class="page-transition py-24 px-6 max-w-7xl mx-auto">
-            <h2 class="text-5xl font-black mb-16">Marketing Insights</h2>
+            <h2 class="text-5xl font-black mb-16 uppercase tracking-tight">Marketing Insights</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <article class="group cursor-pointer">
                     <div class="rounded-3xl overflow-hidden mb-6 aspect-video">
                         <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                     </div>
                     <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Strategy</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-4 group-hover:text-indigo-600 transition-colors">Why Your Ads Aren't Converting (And How to Fix It)</h3>
+                    <h3 class="text-2xl font-bold mt-2 mb-4 group-hover:text-indigo-600 transition-colors">Why Your Ads Aren't Converting</h3>
                     <p class="text-slate-500 mb-6">Common pitfalls in digital advertising and the metrics you should actually be watching...</p>
                 </article>
                 <article class="group cursor-pointer">
@@ -265,8 +378,8 @@
                         <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                     </div>
                     <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Web Growth</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-4 group-hover:text-indigo-600 transition-colors">The 2024 Guide to SEO for Local Businesses</h3>
-                    <p class="text-slate-500 mb-6">Practical tips to rank your service business at the top of Google Maps...</p>
+                    <h3 class="text-2xl font-bold mt-2 mb-4 group-hover:text-indigo-600 transition-colors">2024 Guide to SEO for Local Business</h3>
+                    <p class="text-slate-500 mb-6">Practical tips to rank your service business at the top of Google Search results...</p>
                 </article>
             </div>
         </div>
@@ -298,11 +411,11 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-bold mb-2">Full Name *</label>
-                                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none">
+                                <input type="text" name="name" required placeholder="Your Name" class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold mb-2">Work Email *</label>
-                                <input type="email" name="_replyto" required placeholder="john@company.com" class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none">
+                                <input type="email" name="_replyto" required placeholder="email@company.com" class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none">
                             </div>
                         </div>
                         
@@ -313,21 +426,21 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-bold mb-2">Service Required *</label>
-                                <select name="service" required class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none appearance-none">
+                                <select name="service" required class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none">
                                     <option value="" disabled selected>Select a Service</option>
                                     <option value="Website Development">Website Development</option>
                                     <option value="SEO Optimization">SEO Optimization</option>
                                     <option value="Paid Advertising">Paid Advertising (Ads)</option>
                                     <option value="Social Media Management">Social Media Management</option>
                                     <option value="Branding & Identity">Branding & Identity</option>
-                                    <option value="Full Growth Suite">Full Digital Growth Suite</option>
+                                    <option value="Custom Consultation">Custom Consultation</option>
                                 </select>
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-sm font-bold mb-2">Current Challenges / Message *</label>
-                            <textarea name="message" required rows="4" placeholder="Briefly describe what you're looking to achieve..." class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none"></textarea>
+                            <label class="block text-sm font-bold mb-2">Message *</label>
+                            <textarea name="message" required rows="4" placeholder="How can I help you grow?" class="w-full bg-slate-50 border-0 rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-600 outline-none"></textarea>
                         </div>
                         
                         <div id="form-status" class="hidden p-4 rounded-xl text-sm font-bold"></div>
@@ -340,7 +453,6 @@
     </template>
 
     <script>
-        // Simple Router Engine
         function navigateTo(pageId) {
             const container = document.getElementById('appContent');
             const template = document.getElementById(`page-${pageId}`);
@@ -357,7 +469,6 @@
             });
         }
 
-        // Form Submission Logic
         function attachFormHandler() {
             const form = document.getElementById('contact-form');
             const status = document.getElementById('form-status');
@@ -378,14 +489,12 @@
                     });
                     
                     if (response.ok) {
-                        status.innerText = "Success! I'll review your inquiry and get back to you within 24 hours.";
+                        status.innerText = "Thanks! I'll get back to you within 24 hours.";
                         status.className = "p-4 rounded-xl text-sm font-bold bg-green-50 text-green-700 block";
                         form.reset();
-                    } else {
-                        throw new Error();
-                    }
+                    } else { throw new Error(); }
                 } catch (error) {
-                    status.innerText = "Error submitting form. Please reach out via WhatsApp directly.";
+                    status.innerText = "Error sending message. Please use WhatsApp directly.";
                     status.className = "p-4 rounded-xl text-sm font-bold bg-red-50 text-red-700 block";
                 } finally {
                     btn.disabled = false;
@@ -394,7 +503,6 @@
             };
         }
 
-        // Initialization
         window.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.replace('#', '') || 'home';
             navigateTo(hash);
